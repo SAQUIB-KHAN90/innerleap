@@ -1798,7 +1798,7 @@ a:hover {
 
 /* Our Mission Section Styles */
 .our-mission-section {
-    background-color: #1a1a1a; /* Dark background as per image */
+    background-color: #333; /* Dark background as per image */
     color: #ffffff; /* White text color */
     padding: 80px 20px; /* Ample padding for spacing */
     text-align: center;
