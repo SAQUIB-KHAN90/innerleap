@@ -51,4 +51,105 @@ window.addEventListener('click', (event) => {
             }
         });
     }
+});
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+
+// Next/previous controls
+function plusSlides(n) {
+  showManualSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showManualSlides(slideIndex = n);
+}
+
+function showManualSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+// Testimonial Carousel functionality
+let testimonialIndex = 0;
+showTestimonials();
+
+function showTestimonials() {
+    let i;
+    let testimonials = document.getElementsByClassName("testimonial-item");
+    let dots = document.getElementsByClassName("nav-dot");
+    for (i = 0; i < testimonials.length; i++) {
+        testimonials[i].style.display = "none";
+    }
+    testimonialIndex++;
+    if (testimonialIndex > testimonials.length) {testimonialIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    testimonials[testimonialIndex-1].style.display = "block";
+    dots[testimonialIndex-1].className += " active";
+    setTimeout(showTestimonials, 5000); // Change testimonial every 5 seconds
+}
+
+function currentTestimonial(n) {
+  showManualTestimonials(testimonialIndex = n);
+}
+
+function showManualTestimonials(n) {
+    let i;
+    let testimonials = document.getElementsByClassName("testimonial-item");
+    let dots = document.getElementsByClassName("nav-dot");
+    if (n > testimonials.length) {testimonialIndex = 1}
+    if (n < 1) {testimonialIndex = testimonials.length}
+    for (i = 0; i < testimonials.length; i++) {
+        testimonials[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    testimonials[testimonialIndex-1].style.display = "block";
+    dots[testimonialIndex-1].className += " active";
+}
+
+// FAQ Section Script
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', event => {
+        const faqItem = item.closest('.faq-item');
+        faqItem.classList.toggle('active');
+        const faqAnswer = faqItem.querySelector('.faq-answer');
+        if (faqItem.classList.contains('active')) {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+        } else {
+            faqAnswer.style.maxHeight = "0";
+        }
+    });
 }); 
