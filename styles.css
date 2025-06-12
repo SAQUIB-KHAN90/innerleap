@@ -468,11 +468,13 @@
 
 .section-philosophy p,
 .section-framework p {
-    margin-bottom: 1rem;
-    line-height: 1.8;
-    color: #555;
-    font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  color: #555;
+  font-size: 1.05rem;
+  text-align: left; /* force alignment left */
 }
+
 
 .section-philosophy ul {
     list-style: none;
@@ -480,13 +482,28 @@
     margin-bottom: 1rem;
 }
 
+.section-philosophy ul {
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .section-philosophy ul li {
     margin-bottom: 0.5rem;
     color: #555;
     font-size: 1.05rem;
     position: relative;
-    padding-left: 1.5rem; /* Space for custom bullet */
+    padding-left: 2rem;  /* Reduce padding for better alignment */
+    text-align: left;
 }
+.section-philosophy ul li::before {
+    content: '\2022'; /* Unicode for a bullet point */
+    color: #e60000;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em; /* Adjust this to reduce indentation */
+}
+
 
 .section-philosophy ul li::before {
     content: '\2022'; /* Unicode for a bullet point */
@@ -2716,4 +2733,22 @@ a:hover {
         bottom: 10px;
         right: 10px;
     }
+}
+
+.audio-intro {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.audio-intro h4 {
+    font-size: 1.2rem;
+    color: #e60000;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.audio-intro audio {
+    width: 100%;
+    max-width: 500px;
+    outline: none;
 }
