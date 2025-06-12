@@ -337,6 +337,19 @@
     padding: 0 2rem;
     line-height: 1.8;
     color: #333;
+    text-align: left;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.row-image {
+    width: 23%; /* Adjust width to fit 4 images in a row */
+    height: auto;
+    border-radius: 5px;
 }
 
 .founder-image {
@@ -2464,5 +2477,243 @@ a:hover {
 
     .contact-right .background-number {
         font-size: 5rem;
+    }
+}
+
+/* Our Values Section Styles */
+.our-values-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.our-values-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.our-values-section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-number {
+    font-size: 3rem;
+    color: rgba(230, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 0;
+}
+
+.value-item h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    z-index: 1;
+}
+
+.value-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Chatbot styles */
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 90px; /* Above the toggle button */
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.chatbot-header {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.chatbot-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.chatbot-message {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background-color: #e0e0e0;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background-color: #f1f1f1;
+}
+
+.chatbot-footer input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.chatbot-footer button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-footer button:hover {
+    background-color: #cc0000;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .chatbot-window {
+        width: calc(100% - 30px); /* Full width minus margin */
+        height: 70%; /* Adjust height for smaller screens */
+        bottom: 75px;
+        right: 15px;
+        left: 15px; /* Center it horizontally */
+        margin: auto;
+    }
+
+    .chatbot-header h3 {
+        font-size: 1rem;
+    }
+
+    .chatbot-close {
+        font-size: 1.3rem;
+    }
+
+    .chatbot-message {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-window {
+        width: calc(100% - 20px);
+        right: 10px;
+        left: 10px;
+    }
+
+    .chatbot-toggle {
+        bottom: 10px;
+        right: 10px;
     }
 }

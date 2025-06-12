@@ -152,4 +152,53 @@ document.querySelectorAll('.faq-question').forEach(item => {
             faqAnswer.style.maxHeight = "0";
         }
     });
-}); 
+});
+
+// Chatbot functionality
+const chatbotToggle = document.getElementById('chatbot-toggle');
+const chatbotWindow = document.getElementById('chatbot-window');
+const chatbotClose = document.getElementById('chatbot-close');
+
+chatbotToggle.addEventListener('click', () => {
+    chatbotWindow.style.display = 'flex';
+});
+
+chatbotClose.addEventListener('click', () => {
+    chatbotWindow.style.display = 'none';
+});
+
+// Basic message sending (for demonstration)
+const chatbotSendBtn = document.getElementById('chatbot-send');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotBody = document.getElementById('chatbot-body');
+
+chatbotSendBtn.addEventListener('click', () => {
+    sendMessage();
+});
+
+chatbotInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
+    const messageText = chatbotInput.value.trim();
+    if (messageText !== '') {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('chatbot-message', 'user-message');
+        messageDiv.textContent = messageText;
+        chatbotBody.appendChild(messageDiv);
+        chatbotInput.value = '';
+        chatbotBody.scrollTop = chatbotBody.scrollHeight; // Scroll to bottom
+
+        // Simulate bot response (you would integrate with a real chatbot API here)
+        setTimeout(() => {
+            const botResponseDiv = document.createElement('div');
+            botResponseDiv.classList.add('chatbot-message', 'bot-message');
+            botResponseDiv.textContent = "I'm a simple bot. How else can I assist you?";
+            chatbotBody.appendChild(botResponseDiv);
+            chatbotBody.scrollTop = chatbotBody.scrollHeight; // Scroll to bottom
+        }, 1000);
+    }
+} 
