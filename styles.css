@@ -2883,11 +2883,18 @@ a:hover {
 }
 
 /* Team Page Styles */
+.main-content-team {
+    max-width: 1200px; /* Make this section wider */
+    margin: 2rem auto; /* Center it */
+    padding: 0 20px; /* Add some padding */
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 4rem;
     margin: 2rem 0;
+    /* Removed fixed width */
 }
 
 .team-member {
@@ -2980,7 +2987,8 @@ a:hover {
     }
     
     .member-image {
-        flex: 0 0 400px;
+        flex: 1; /* Allow image container to be flexible */
+        max-width: 100%; /* Ensure it doesn't exceed its container */
     }
 }
 
