@@ -3237,6 +3237,18 @@ a:hover {
     font-size: 0.95rem;
     color: #555;
     margin-bottom: 0.5rem;
+    font-style: italic; /* Make text italic */
+    position: relative;
+    padding-left: 1.2em; /* Space for bullet */
+}
+
+.skill-category .sub-list li::before {
+    content: '\2022'; /* Unicode for a bullet point */
+    color: #e63946; /* Red color for bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em;
 }
 
 .blog-header-image {
