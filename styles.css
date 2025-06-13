@@ -816,6 +816,7 @@
     margin-bottom: 0.5rem;
     color: #e60000; /* Red color from image */
     font-family: 'serif', Georgia, 'Times New Roman', Times;
+    text-align: center; /* Align section title to center */
 }
 
 .sub-section-title {
@@ -823,6 +824,7 @@
     margin-bottom: 1.5rem;
     color: #333;
     font-family: 'serif', Georgia, 'Times New Roman', Times;
+    text-align: center; /* Align sub-section title to center */
 }
 
 .main-column p {
