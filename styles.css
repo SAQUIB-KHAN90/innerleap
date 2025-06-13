@@ -173,16 +173,25 @@
 
     .dropdown-content {
         position: static;
-        box-shadow: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-width: unset;
-        background-color: #f1f1f1;
+        background-color: #f9f9f9;
         border-top: none;
-        padding: 0;
+        padding: 10px 0;
     }
 
     .dropdown-content a {
-        padding: 8px 0;
+        padding: 10px 20px;
         text-align: center;
+        border-bottom: 1px solid #eee; /* Add a subtle separator */
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none; /* Remove border from last item */
+    }
+
+    .dropdown-content.show {
+        display: block;
     }
 }
 
@@ -284,8 +293,14 @@
     }
 
     .hero-image {
-        min-height: 300px;
+        min-height: 250px; /* Reduced min-height for medium screens */
+        height: auto; /* Allow height to adjust based on content */
         width: 100%;
+    }
+
+    .hero-image img {
+        object-fit: contain; /* Ensure image is contained within its space */
+        object-position: center; /* Center the image when contained */
     }
 
     .hero-content {
@@ -298,6 +313,10 @@
 }
 
 @media (max-width: 576px) {
+    .hero-image {
+        min-height: 180px; /* Further reduced min-height for small mobile screens */
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -434,10 +453,16 @@
 
     .footer-section {
         margin-bottom: 2rem;
+        width: 100%; /* Ensure footer sections take full width on mobile */
+        margin: 0 auto; /* Center footer sections */
     }
 
     .footer-section:last-child {
         margin-bottom: 0;
+    }
+
+    .footer-section.contact-info {
+        text-align: center; /* Ensure content is centered on mobile */
     }
 }
 
@@ -2761,13 +2786,15 @@ a:hover {
 .contact-content1 {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: column; /* Always stack content vertically */
     gap: 40px;
 }
 
 .contact-left1,
 .contact-right1 {
-    width: 100%;
+    width: 100%; /* Ensure each section takes full width */
+    max-width: 700px; /* Limit overall width for readability */
+    margin: 0 auto; /* Center individual sections */
 }
 
 .contact-form1 {
@@ -2778,7 +2805,9 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 1200px;
+    width: 100%; /* Make form responsive to its parent */
+    max-width: none; /* Allow form to take max-width of its parent */
+    margin: 0 auto; /* Center the form within its container */
 }
 
 .contact-form1 h3 {
@@ -2842,15 +2871,12 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+    /* No specific flex-direction needed here for .contact-content1 as it's always column */
     .contact-content1 {
-        flex-direction: column;
+        align-items: center; /* Ensure horizontal centering on larger screens */
+        justify-content: center; /* Ensure vertical centering (if height allows) */
     }
-
-    .contact-left1,
-    .contact-right1 {
-        max-width: 900px;
-        margin: 0 auto;
-    }
+    /* Remove redundant width and max-width definitions for contact-left1 and contact-right1 */
 }
 
 /* Team Page Styles */
@@ -2989,6 +3015,7 @@ a:hover {
     display: flex;
     gap: 15px;
     margin-top: 15px;
+    justify-content: center; /* Center the social media icons */
 }
 
 .social-links a {
@@ -3128,7 +3155,7 @@ a:hover {
 }
 
 .image-row .gallery-image {
-    width: 250px;
+    width: 300px;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
@@ -3238,4 +3265,64 @@ a:hover {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    .banner-section.slideshow-container {
+        height: 20vh;
+    }
+
+    .mySlides img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .banner-section.slideshow-container {
+        height: 40vh;
+    }
+
+    .mySlides img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row .gallery-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-workshops-content .full-width-image {
+        width: 90%; /* Adjust width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-content1 {
+        flex-direction: column; /* Ensure elements stack in a column on larger screens */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically (if height allows) */
+    }
+
+    .contact-left1,
+    .contact-right1 {
+        width: 100%; /* Take full width for each row */
+        max-width: 700px; /* Limit overall width for readability, similar to form */
+        margin: 0 auto; /* Center individual sections */
+    }
+
+    .contact-form1 {
+        width: 100%;
+        max-width: none; /* Allow form to take max-width of its parent (.contact-left1) */
+    }
 }

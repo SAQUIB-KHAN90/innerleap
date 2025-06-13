@@ -8,9 +8,9 @@ hamburger.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        // Close hamburger menu on nav-link click (for mobile)
-        if (hamburger.classList.contains('active')) {
+    link.addEventListener('click', (event) => {
+        // Only close hamburger menu on nav-link click if it's not a dropdown button
+        if (!link.classList.contains('dropbtn') && hamburger.classList.contains('active')) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
         }
@@ -60,11 +60,15 @@ function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0) return; // Exit if no slides are found
+
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
+
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
@@ -75,18 +79,25 @@ function showSlides() {
 
 // Next/previous controls
 function plusSlides(n) {
-  showManualSlides(slideIndex += n);
+    let slides = document.getElementsByClassName("mySlides");
+    if (slides.length === 0) return; // Exit if no slides are found
+    showManualSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showManualSlides(slideIndex = n);
+    let slides = document.getElementsByClassName("mySlides");
+    if (slides.length === 0) return; // Exit if no slides are found
+    showManualSlides(slideIndex = n);
 }
 
 function showManualSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
+
+    if (slides.length === 0) return; // Exit if no slides are found
+
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -107,6 +118,9 @@ function showTestimonials() {
     let i;
     let testimonials = document.getElementsByClassName("testimonial-item");
     let dots = document.getElementsByClassName("nav-dot");
+
+    if (testimonials.length === 0) return; // Exit if no testimonials are found
+
     for (i = 0; i < testimonials.length; i++) {
         testimonials[i].style.display = "none";
     }
@@ -121,13 +135,18 @@ function showTestimonials() {
 }
 
 function currentTestimonial(n) {
-  showManualTestimonials(testimonialIndex = n);
+    let testimonials = document.getElementsByClassName("testimonial-item");
+    if (testimonials.length === 0) return; // Exit if no testimonials are found
+    showManualTestimonials(testimonialIndex = n);
 }
 
 function showManualTestimonials(n) {
     let i;
     let testimonials = document.getElementsByClassName("testimonial-item");
     let dots = document.getElementsByClassName("nav-dot");
+
+    if (testimonials.length === 0) return; // Exit if no testimonials are found
+
     if (n > testimonials.length) {testimonialIndex = 1}
     if (n < 1) {testimonialIndex = testimonials.length}
     for (i = 0; i < testimonials.length; i++) {
