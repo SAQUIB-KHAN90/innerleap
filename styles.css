@@ -50,10 +50,11 @@
 .nav-link {
     color: #333;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     transition: color 0.3s ease;
     position: relative;
     padding: 0.5rem 0;
+    font-size: 16.5px;
 }
 
 .nav-link:hover {
