@@ -3023,6 +3023,10 @@ a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.end-image {
+    text-align: center; /* Center the image within this container */
+}
+
 /* Social Media Icons in Footer */
 .social-links {
     display: flex;
@@ -3349,5 +3353,130 @@ a:hover {
     .contact-form1 {
         width: 100%;
         max-width: none; /* Allow form to take max-width of its parent (.contact-left1) */
+    }
+}
+
+/* Overlaid Content Styling */
+.overlaid-content {
+    position: absolute;
+    top: 80%; /* Adjusted to move buttons significantly lower */
+    left: 54%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 60%;
+    max-width: 900px;
+}
+.overlaid-content1 {
+    position: absolute;
+    top: 80%; /* Adjusted to move buttons significantly lower */
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 60%;
+    max-width: 900px;
+}
+
+.inner-leap-text {
+    display: none; /* Hide this text */
+}
+
+.red-line {
+    display: none; /* Hide the red line */
+}
+
+.overlaid-content h1 {
+    display: none; /* Hide the main heading */
+}
+
+.banner-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.banner-button-red {
+    background-color: #e60000;
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1em;
+    border: 2px solid white;
+}
+
+.banner-button-red:hover {
+    background-color: #c00000;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .overlaid-content h1 {
+        font-size: 3.5em;
+    }
+
+    .banner-button-red {
+        padding: 15px 30px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlaid-content {
+        width: 90%;
+        top: 85%; /* Maintain lower position for smaller screens */
+    }
+
+    .overlaid-content h1 {
+        font-size: 2.8em;
+        margin-bottom: 30px;
+    }
+
+    .inner-leap-text {
+        font-size: 1em;
+    }
+
+    .banner-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner-button-red {
+        width: 80%;
+        margin: 0 auto;
+        padding: 12px 25px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 576px) {
+    .overlaid-content h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .inner-leap-text {
+        font-size: 0.9em;
+    }
+
+    .red-line {
+        height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .banner-button-red {
+        width: 90%;
+        padding: 10px 20px;
+        font-size: 0.8em;
     }
 }
