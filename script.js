@@ -1,24 +1,30 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
-const dropdowns = document.querySelectorAll(".dropdown");
+const dropdownToggles = document.querySelectorAll(".dropbtn");
 
+// Toggle hamburger menu
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navLinks.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    // Only close hamburger menu on nav-link click if it's not a dropdown button
-    if (
-      !link.classList.contains("dropbtn") &&
-      hamburger.classList.contains("active")
-    ) {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
+// Toggle dropdowns only on mobile
+dropdownToggles.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // prevent link jumping
+      const parent = this.parentElement;
+      parent.classList.toggle("open");
+
+      // Close others
+      document.querySelectorAll(".dropdown").forEach((drop) => {
+        if (drop !== parent) drop.classList.remove("open");
+      });
     }
   });
 });
+
+const dropdowns = document.querySelectorAll(".dropdown");
 
 // Dropdown functionality
 dropdowns.forEach((dropdown) => {
