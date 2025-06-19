@@ -211,3 +211,11 @@ window.addEventListener("scroll", () => {
     popup.classList.remove("active");
   }
 });
+
+window.addEventListener("load", () => {
+  document.getElementById("popup").style.display = "flex";
+});
+
+document.getElementById("closeBtn").addEventListener("click", () => {
+  document.getElementById("popup").style.display = "none";
+});

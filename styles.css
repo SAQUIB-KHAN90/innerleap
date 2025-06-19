@@ -3714,6 +3714,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  margin-left: 10px;
 }
 
 .nav-link {
@@ -3866,8 +3867,8 @@ a:hover {
 }
 .top-bar {
   width: 100%;
-  background-color: #fff; /* Tailwind-style orange (or #ff6a00 / #fd7e14) */
-  color: #9d0202;
+  background-color: #9d0202; /* Tailwind-style orange (or #ff6a00 / #fd7e14) */
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   padding: 6px 0;
@@ -3888,4 +3889,83 @@ a:hover {
 
 .top-bar marquee {
   display: block;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fefaf2;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.popup-logo {
+  width: 120px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.popup-heading {
+  font-size: 24px;
+  text-align: center;
+  color: #331a12;
+  margin-bottom: 10px;
+}
+
+.popup-subtext {
+  font-size: 15px;
+  text-align: center;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.popup-form input,
+.popup-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.popup-submit {
+  width: 100%;
+  background-color: #4b100b;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-submit:hover {
+  background-color: #631913;
 }
