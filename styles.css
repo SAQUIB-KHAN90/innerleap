@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .navbar {
@@ -17,7 +17,7 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  font-family: "Absans";
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .navbar .container {
@@ -25,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-width: 1500px;
   padding: 0 20px;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .logo a:hover {
-  color: red;
+  color: #9d0202;
 }
 
 .nav-links {
@@ -57,7 +58,7 @@
 }
 
 .nav-link:hover {
-  color: red;
+  color: #9d0202;
 }
 
 .nav-link::after {
@@ -67,12 +68,31 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: red;
+  background-color: #9d0202;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
+}
+.buttonssss {
+  background-color: #9d0202; /* deep red to match your branding */
+  color: #fff;
+  border: 2px solid #9d0202;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttonssss:hover {
+  background-color: transparent;
+  color: #8b0000;
+  cursor: pointer;
 }
 
 /* Dropdown styles */
@@ -90,7 +110,7 @@
   z-index: 1;
   left: 0;
   top: calc(100% + 5px);
-  border-top: 3px solid red;
+  border-top: 3px solid #9d0202;
 }
 
 .dropdown-content a {
@@ -235,12 +255,12 @@
 .content-vertical-line {
   width: 2px;
   height: 50px; /* Adjust height as needed */
-  background-color: #e60000; /* Red color from image */
+  background-color: #9d0202; /* Red color from image */
   margin: 1rem auto; /* Center the line and provide vertical spacing */
 }
 
 .hero-subtitle {
-  color: #e60000; /* Red color from image */
+  color: #9d0202; /* Red color from image */
   font-size: 1rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -251,7 +271,7 @@
   color: #333;
   margin-bottom: 2rem;
   line-height: 1.2;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .hero-buttons {
@@ -271,21 +291,21 @@
 }
 
 .primary-button {
-  background-color: #e60000; /* Red color from image */
+  background-color: #9d0202; /* Red color from image */
   color: #fff;
 }
 
 .primary-button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .secondary-button {
-  background-color: #e60000; /* Changed to red */
+  background-color: #9d0202; /* Changed to red */
   color: #fff;
 }
 
 .secondary-button:hover {
-  background-color: #cc0000; /* Changed to red hover */
+  background-color: #9d0202; /* Changed to red hover */
 }
 
 @media (max-width: 992px) {
@@ -344,8 +364,8 @@
 .page-header h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  font-family: "serif", Georgia, "Times New Roman", Times;
-  color: red;
+  font-family: "Josefin Sans", sans-serif;
+  color: #9d0202;
 }
 
 .page-header p {
@@ -413,7 +433,7 @@
 .footer-section h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: red;
+  color: #9d0202;
 }
 
 .footer-section p,
@@ -435,7 +455,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #007bff;
+  color: #9d0202;
 }
 
 @media (max-width: 768px) {
@@ -490,7 +510,7 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
 }
 
@@ -524,7 +544,7 @@
 }
 .section-philosophy ul li::before {
   content: "\2022"; /* Unicode for a bullet point */
-  color: #e60000;
+  color: #9d0202;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -533,7 +553,7 @@
 
 .section-philosophy ul li::before {
   content: "\2022"; /* Unicode for a bullet point */
-  color: #e60000; /* Red bullet */
+  color: #9d0202; /* Red bullet */
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -571,7 +591,7 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
 }
 
@@ -615,7 +635,7 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: left; /* Align heading to the left */
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
 }
 
@@ -686,7 +706,7 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
 }
 
@@ -713,9 +733,9 @@
 }
 
 .skill-box.red {
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
-  border-color: #e60000;
+  border-color: #9d0202;
 }
 
 .skill-box.red .skill-header i {
@@ -811,8 +831,8 @@
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  color: #e60000; /* Red color from image */
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  color: #9d0202; /* Red color from image */
+  font-family: "Josefin Sans", sans-serif;
   text-align: center; /* Align section title to center */
 }
 
@@ -820,7 +840,7 @@
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center; /* Align sub-section title to center */
 }
 
@@ -868,7 +888,7 @@
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 1rem;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .about-widget .sidebar-image {
@@ -947,7 +967,7 @@
 }
 
 .comments-widget p a {
-  color: #007bff;
+  color: #9d0202;
   text-decoration: none;
 }
 
@@ -1024,7 +1044,7 @@
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
 
@@ -1035,19 +1055,18 @@
 }
 
 .service-item {
-  background-color: #fff;
   padding: 1.5rem;
-  border: 1px solid #eee;
+
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .service-item h4 {
   font-size: 1.1rem;
-  color: #e60000; /* Red color for service titles */
+  color: #9d0202; /* Red color for service titles */
   margin-bottom: 1rem;
   line-height: 1.4;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .service-item ul {
@@ -1065,7 +1084,7 @@
 
 .service-item ul li::before {
   content: "\2022"; /* Unicode for a bullet point */
-  color: #e60000; /* Red bullet */
+  color: #9d0202; /* Red bullet */
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -1126,8 +1145,8 @@
 .books-main-title {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #e60000; /* Red color from image */
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  color: #9d0202; /* Red color from image */
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
 
@@ -1139,7 +1158,7 @@
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 1.5rem;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.5rem;
 }
@@ -1242,7 +1261,7 @@
 }
 
 .tags-widget a {
-  color: #007bff;
+  color: #9d0202;
   text-decoration: none;
   margin-right: 0.5rem;
   white-space: nowrap;
@@ -1300,8 +1319,8 @@
 .case-study-content .section-sub-title {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #e60000; /* Red color from image */
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  color: #9d0202; /* Red color from image */
+  font-family: "Josefin Sans", sans-serif;
   text-align: left;
   border-bottom: 1px solid #eee;
   padding-bottom: 0.5rem;
@@ -1323,7 +1342,7 @@
   font-size: 1.8rem;
   color: #333;
   margin-bottom: 0.5rem;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   line-height: 1.2;
 }
 
@@ -1349,7 +1368,7 @@
   }
 }
 
-/* Our Blog Section Styles */
+/* Scribble Pad  Section Styles */
 .blog-section {
   padding: 80px 0;
   background-color: #ffffff;
@@ -1369,12 +1388,12 @@
 .blog-header h2 {
   font-size: 2.5rem;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 10px;
 }
 
 .blog-header .view-all-link {
-  color: #e60000;
+  color: #9d0202;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -1382,7 +1401,7 @@
 }
 
 .blog-header .view-all-link:hover {
-  color: #cc0000;
+  color: #9d0202;
 }
 
 .post-grid {
@@ -1406,7 +1425,7 @@
 
 .post-item img {
   width: 100%;
-  height: 400px; /* Fixed height for consistency */
+  height: 600px; /* Fixed height for consistency */
   object-fit: cover;
   display: block;
 }
@@ -1415,7 +1434,7 @@
   font-size: 1.4rem;
   color: #333;
   margin: 20px 20px 10px 20px;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .post-item .post-meta {
@@ -1435,7 +1454,7 @@
 .post-item .read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -1445,7 +1464,7 @@
 }
 
 .post-item .read-more:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .container {
@@ -1455,7 +1474,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
   line-height: 1.6;
 }
@@ -1466,7 +1485,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Georgia", serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #333;
   margin-bottom: 15px;
 }
@@ -1496,13 +1515,13 @@ p {
 }
 
 a {
-  color: #007bff;
+  color: #9d0202;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #9d0202;
 }
 
 .navbar .container,
@@ -1523,7 +1542,7 @@ a:hover {
   padding: 60px 20px;
   background-color: #f8f8f8;
   text-align: center;
-  font-family: "Lora", serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .founder-story-section h2 {
@@ -1564,7 +1583,7 @@ a:hover {
   left: -20px; /* Adjust as needed */
   width: 100px;
   height: 100px;
-  background-color: #e60000; /* Red color */
+  background-color: #9d0202; /* Red color */
   z-index: 1;
 }
 
@@ -1588,27 +1607,27 @@ a:hover {
 .founder-text-content p {
   font-size: 1.1em;
   margin-bottom: 20px;
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .founder-text-content h3 {
   font-size: 1.5em;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #e60000; /* Red color */
+  color: #9d0202; /* Red color */
 }
 
 .read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 @media (max-width: 768px) {
@@ -1751,7 +1770,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  color: #e60000;
+  color: #9d0202;
   font-size: 1rem;
   letter-spacing: 2px;
   margin-bottom: 1rem;
@@ -1760,7 +1779,7 @@ a:hover {
 .content-vertical-line {
   width: 2px;
   height: 50px;
-  background-color: #e60000;
+  background-color: #9d0202;
   margin: 1rem auto;
 }
 
@@ -1769,7 +1788,7 @@ a:hover {
   color: #333;
   margin-bottom: 2rem;
   line-height: 1.2;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .hero-buttons {
@@ -1789,21 +1808,21 @@ a:hover {
 }
 
 .primary-button {
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
 }
 
 .primary-button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .secondary-button {
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
 }
 
 .secondary-button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .scroll-to-top-indicator {
@@ -1824,7 +1843,7 @@ a:hover {
 .scroll-to-top-indicator .scroll-line {
   width: 50px;
   height: 2px;
-  background-color: #e60000;
+  background-color: #9d0202;
 }
 
 .prev,
@@ -1848,7 +1867,7 @@ a:hover {
 .our-mission-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  font-family: "serif", Georgia, "Times New Roman", Times; /* Matching font from hero-title */
+  font-family: "Josefin Sans", sans-serif; /* Matching font from hero-title */
   color: #ffffff; /* White color for the title */
 }
 
@@ -1901,7 +1920,7 @@ a:hover {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   line-height: 1.2;
 }
 
@@ -1927,7 +1946,7 @@ a:hover {
 .service-number {
   font-size: 3rem;
   font-weight: bold;
-  color: #e60000; /* Red color */
+  color: #9d0202; /* Red color */
   line-height: 1;
 }
 
@@ -2000,12 +2019,12 @@ a:hover {
 .testimonial-header h2 {
   font-size: 2.5rem;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 10px;
 }
 
 .testimonial-header .all-testimonials-link {
-  color: #e60000; /* Red color */
+  color: #9d0202; /* Red color */
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -2013,7 +2032,7 @@ a:hover {
 }
 
 .testimonial-header .all-testimonials-link:hover {
-  color: #cc0000;
+  color: #9d0202;
 }
 
 .background-number {
@@ -2071,7 +2090,7 @@ a:hover {
 
 .testimonial-navigation .nav-dot.active,
 .testimonial-navigation .nav-dot:hover {
-  background-color: #e60000; /* Red color for active/hover dot */
+  background-color: #9d0202; /* Red color for active/hover dot */
 }
 
 @media (max-width: 768px) {
@@ -2134,7 +2153,7 @@ a:hover {
 .about-me-text-content h2 {
   font-size: 2.5rem;
   color: #333;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 20px;
 }
 
@@ -2146,14 +2165,14 @@ a:hover {
 }
 
 .about-me-text-content .red-text {
-  color: #e60000; /* Red color for highlighted text */
+  color: #9d0202; /* Red color for highlighted text */
   font-weight: bold;
 }
 
 .about-me-text-content .read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -2161,7 +2180,7 @@ a:hover {
 }
 
 .about-me-text-content .read-more:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .about-me-image-container {
@@ -2188,7 +2207,7 @@ a:hover {
   right: 0;
   width: 100px;
   height: 100px;
-  background-color: #e60000; /* Red color */
+  background-color: #9d0202; /* Red color */
   z-index: 1;
 }
 
@@ -2267,7 +2286,7 @@ a:hover {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: "serif", Georgia, "Times New Roman", Times;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .library-section .quote {
@@ -2278,7 +2297,7 @@ a:hover {
 }
 
 .library-section .button.primary-button {
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
   text-decoration: none;
   padding: 12px 25px;
@@ -2289,7 +2308,7 @@ a:hover {
 }
 
 .library-section .button.primary-button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
   color: #fff;
 }
 
@@ -2315,7 +2334,7 @@ a:hover {
   font-size: 2.8rem;
   color: #333;
   margin-bottom: 50px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
 
@@ -2348,7 +2367,7 @@ a:hover {
 .faq-question span {
   font-size: 1.5rem;
   margin-right: 15px;
-  color: #e60000; /* Red color for the plus/minus icon */
+  color: #9d0202; /* Red color for the plus/minus icon */
   font-weight: bold;
   transition: transform 0.3s ease;
 }
@@ -2425,12 +2444,12 @@ a:hover {
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 5px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .contact-right .get-in-touch {
   font-size: 0.9rem;
-  color: #e60000;
+  color: #9d0202;
   margin-bottom: 30px;
 }
 
@@ -2443,7 +2462,7 @@ a:hover {
   color: rgba(0, 0, 0, 0.05); /* Very light grey */
   font-weight: bold;
   z-index: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   pointer-events: none;
 }
 
@@ -2452,7 +2471,7 @@ a:hover {
   color: #333;
   margin-top: 20px;
   margin-bottom: 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .contact-right p {
@@ -2463,13 +2482,13 @@ a:hover {
 }
 
 .contact-right p a {
-  color: #e60000;
+  color: #9d0202;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-right p a:hover {
-  color: #cc0000;
+  color: #9d0202;
 }
 
 .social-icons {
@@ -2486,7 +2505,7 @@ a:hover {
 }
 
 .social-icons a:hover {
-  color: #e60000;
+  color: #9d0202;
 }
 
 .contact-map {
@@ -2555,7 +2574,7 @@ a:hover {
   font-size: 2.8rem;
   color: #333;
   margin-bottom: 50px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   text-align: center;
 }
 
@@ -2585,7 +2604,7 @@ a:hover {
 .value-number {
   font-size: 3rem;
   color: rgba(230, 0, 0, 0.1);
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   position: absolute;
   top: -10px;
@@ -2597,7 +2616,7 @@ a:hover {
   font-size: 1.6rem;
   color: #333;
   margin-bottom: 15px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
   position: relative;
   z-index: 1;
 }
@@ -2621,7 +2640,7 @@ a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: red;
+  background-color: #9d0202;
   color: white;
   border-radius: 50%;
   width: 60px;
@@ -2651,7 +2670,7 @@ a:hover {
 }
 
 .chatbot-header {
-  background-color: red;
+  background-color: #9d0202;
   color: white;
   padding: 15px;
   border-top-left-radius: 10px;
@@ -2717,7 +2736,7 @@ a:hover {
 }
 
 .chatbot-footer button {
-  background-color: red;
+  background-color: #9d0202;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -2728,7 +2747,7 @@ a:hover {
 }
 
 .chatbot-footer button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 /* Media queries for responsiveness */
@@ -2783,9 +2802,9 @@ a:hover {
 
 .audio-intro h4 {
   font-size: 1.2rem;
-  color: #e60000;
+  color: #9d0202;
   margin-bottom: 10px;
-  font-family: "Playfair Display", serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .audio-intro audio {
@@ -2828,8 +2847,8 @@ a:hover {
 
 .contact-form1 h3 {
   font-size: 1.5rem;
-  color: #e60000;
-  font-family: "Playfair Display", serif;
+  color: #9d0202;
+  font-family: "Josefin Sans", sans-serif;
   margin-bottom: 10px;
 }
 
@@ -2839,12 +2858,12 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  font-family: inherit;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .contact-form1 button {
   padding: 12px;
-  background-color: #e60000;
+  background-color: #9d0202;
   color: #fff;
   font-size: 1rem;
   border: none;
@@ -2854,14 +2873,14 @@ a:hover {
 }
 
 .contact-form1 button:hover {
-  background-color: #cc0000;
+  background-color: #9d0202;
 }
 
 .contact-right1 h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #e60000;
-  font-family: "Playfair Display", serif;
+  color: #9d0202;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .contact-right1 p {
@@ -3014,7 +3033,7 @@ a:hover {
 .cta-button {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #e63946;
+  background-color: #9d0202;
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
@@ -3022,14 +3041,14 @@ a:hover {
   font-size: 1.1rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 2px solid #e63946;
+  border: 2px solid #9d0202;
   margin: 20px 0;
   margin-left: 130px;
 }
 
 .cta-button:hover {
-  background-color: #c1121f;
-  border-color: #c1121f;
+  background-color: #9d0202;
+  border-color: #9d0202;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -3058,7 +3077,7 @@ a:hover {
 }
 
 .social-links a:hover {
-  color: #e63946;
+  color: #9d0202;
   transform: translateY(-3px);
 }
 
@@ -3114,7 +3133,7 @@ a:hover {
 
 .approach-content ul li:before {
   content: "•";
-  color: #e63946;
+  color: #9d0202;
   position: absolute;
   left: 0;
   font-size: 1.2rem;
@@ -3127,7 +3146,7 @@ a:hover {
 
 /* Brand Name Style */
 .brand-name {
-  color: #e63946;
+  color: #9d0202;
   font-weight: 600;
 }
 
@@ -3233,7 +3252,7 @@ a:hover {
 }
 
 .skill-category h4 {
-  color: #e63946;
+  color: #9d0202;
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -3266,7 +3285,7 @@ a:hover {
 
 .skill-category .sub-list li::before {
   content: "\2022"; /* Unicode for a bullet point */
-  color: #e63946; /* Red color for bullet */
+  color: #9d0202; /* Red color for bullet */
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -3295,7 +3314,7 @@ a:hover {
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #e63946;
+  background-color: #9d0202;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -3422,7 +3441,7 @@ a:hover {
 }
 
 .banner-button-red {
-  background-color: #e60000;
+  background-color: #9d0202;
   color: white;
   padding: 18px 35px;
   text-decoration: none;
@@ -3436,7 +3455,7 @@ a:hover {
 }
 
 .banner-button-red:hover {
-  background-color: #c00000;
+  background-color: #9d0202;
   transform: translateY(-2px);
   color: #fff;
 }
@@ -3524,8 +3543,8 @@ a:hover {
   border-radius: 8px 8px 0 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   margin-bottom: 8px;
-  border-bottom: 2px solid #e60000;
-  color: #e60000;
+  border-bottom: 2px solid #9d0202;
+  color: #9d0202;
   text-align: center;
 }
 .books-table-row {
@@ -3579,7 +3598,7 @@ a:hover {
 }
 .books-table-header .books-table-col {
   font-size: 1.08rem;
-  color: #e60000;
+  color: #9d0202;
   background: #f5f5f5;
   justify-content: center;
   text-align: center;
@@ -3620,7 +3639,7 @@ a:hover {
   .books-table-header .books-table-col {
     border-bottom: none;
     background: none;
-    color: #e60000;
+    color: #9d0202;
     font-weight: bold;
     text-align: left;
   }
@@ -3633,4 +3652,41 @@ a:hover {
 .textsss {
   color: #000;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .li {
+    margin-left: 0px;
+  }
+}
+
+#image-trigger-section {
+  height: 200vh; /* so there's space to scroll while image is visible */
+  position: relative;
+}
+
+.scroll-popup-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: auto;
+  max-width: 80vw;
+  max-height: 90vh;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.scroll-popup-image.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05); /* optional slight pop */
+  pointer-events: auto;
+}
+
+.scroll-popup-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }

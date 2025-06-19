@@ -29,8 +29,9 @@
       rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -63,11 +64,6 @@
               <a href="disruptive-manager.html">Disruptive Manager</a>
               <a href="reinvention-studio.html">Reinvention Studio</a>
               <a href="voice-craft.html">Voice Craft</a>
-              <a
-                style="color: red; font-weight: bolder"
-                href="the-leap-room.html"
-                >The Leap Room</a
-              >
             </div>
           </div>
           <a href="/corporate-services.html" class="nav-link"
@@ -76,10 +72,12 @@
           <a href="events-workshops.html" class="nav-link"
             >Events & Workshops</a
           >
-          <a href="blog.html" class="nav-link">Our Blog</a>
+          <a href="blog.html" class="nav-link">Scribble Pad</a>
 
           <a href="/contact-us.html" class="nav-link">Contact Us</a>
+          <button class="buttonssss">The Leap Room</button>
         </div>
+
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -121,8 +119,8 @@
       <!-- Overlaid Content -->
 
       <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
       <!-- SCROLL TO TOP -->
       <div class="scroll-to-top-indicator">
@@ -168,9 +166,14 @@
         </div>
       </div>
     </div>
-
+    <!-- Trigger Section -->
+    <section id="image-trigger-section">
+      <div class="scroll-popup-image" id="scrollImage">
+        <img src="images/found.jpg" alt="Popup Visual" />
+      </div>
+    </section>
     <!-- Our Mission Section -->
-    <div class="our-mission-section">
+    <div id="our-mission" class="our-mission-section">
       <div class="container">
         <h2>OUR MISSION</h2>
         <p
@@ -251,7 +254,9 @@
             />
           </div>
           <div class="services-text-content">
-            <h2>EXCLUSIVE SERVICES<br />(CORPORATE ONLY)</h2>
+            <h2 style="font-size: 32px"
+              >EXCLUSIVE SERVICES <br />(CORPORATE ONLY)</h2
+            >
             <div class="service-item-list">
               <div class="service-item-row">
                 <div class="service-item">
@@ -376,16 +381,16 @@
       <div class="library-overlay">
         <div class="container">
           <h1
-            >The library isn’t a room<br />
+            >"The library isn’t a room<br />
             It’s a door."</h1
           >
-          <p class="quote">— J.K. Rowling</p>
+
           <a href="books.html" class="button primary-button">Walk Through</a>
         </div>
       </div>
     </section>
 
-    <!-- Our Blog Section -->
+    <!-- Scribble Pad  Section -->
     <div class="blog-section">
       <div class="container">
         <div class="blog-header">
@@ -395,10 +400,10 @@
         <div class="post-grid">
           <div class="post-item">
             <img
-              src="images/b1.jpg"
+              src="images/blog1.jpg"
               alt="Post Image"
               width="300px"
-              height="300px"
+              height="00px"
             />
             <h4 class="post-sub-title"
               >The Shift That Doesn't Show Up in Metrics
@@ -417,7 +422,7 @@
             <a href="/blog.html" class="read-more">Continue reading</a>
           </div>
           <div class="post-item">
-            <img src="images/Blog Section R1.jpg" alt="Post Image" />
+            <img src="images/blog2.jpg" alt="Post Image" height="500px" />
             <h4 class="post-sub-title">
               An Inner Leap has begun. 𝐐𝐮𝐢𝐞𝐭. 𝐔𝐧𝐬𝐡𝐚𝐤𝐞𝐚𝐛𝐥𝐞. 𝐘𝐨𝐮𝐫𝐬</h4
             >
@@ -690,7 +695,6 @@
       src="https://salesiq.zohopublic.in/widget?wc=siqa18c4506efd45a02bb88e184c9093d5290b8fc1653ff13fcaca8346a9aa35931"
       defer
     ></script>
-
     <script src="script.js"></script>
   </body>
 </html>
