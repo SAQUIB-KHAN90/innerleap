@@ -3864,3 +3864,28 @@ a:hover {
     padding: 10px 0;
   }
 }
+.top-bar {
+  width: 100%;
+  background-color: #fff; /* Tailwind-style orange (or #ff6a00 / #fd7e14) */
+  color: #9d0202;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 0;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.top-bar-content {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top-bar marquee {
+  display: block;
+}
