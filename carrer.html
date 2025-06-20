@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Leap Room - InnerLeap</title>
+    <title>Careers | Inner Leap</title>
     <link rel="stylesheet" href="styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="icon" type="image/png" href="images/Logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -68,104 +68,64 @@
           >
         </div>
 
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
       </div>
     </nav>
-
-    <div class="page-header">
-      <div class="container">
-        <div class="header-content">
-          <h2>THE LEAP ROOM</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="main-content two-column-page">
-      <div class="container">
-        <div class="main-column">
-          <img
-            src="images/voice.jpg"
-            alt="Transforming Through Performing Arts"
-            class="main-image"
-          />
-
-          <div class="audio-intro">
-            <h4>Listen to the Program Intro</h4>
-            <audio controls>
-              <source src="images/voice.unknown" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
+    <section class="career-section">
+      <div class="career-container">
+        <div class="career-left">
+          <h1>We’re not just hiring.<br />We’re evolving—together.</h1>
+          <p class="subtext"
+            >Join us if you’re ready to build from the inside out.</p
+          >
+          <button
+            class="cta-btn"
+            style="background-color: #9d0202"
+            onclick="location.href='career-details.html'"
+            >SEE OPEN ROLES</button
+          >
+          <div class="features">
+            <p>✶ <strong>Multidimensional Work</strong></p>
+            <p>✶ <strong>Real Ownership</strong></p>
           </div>
-          <h2 class="sub-section-title">THE LEAP ROOM (SIGNATURE PROGRAM)</h2>
-          <h3
-            class="section-title lies"
-            style="font-size: 20px; text-align: left"
-          >
-            A one-of-a-kind experience that blends Performing Arts + Ego State
-            Work + <br />
-            Humor Therapy to drive real inner shifts.
-          </h3>
+          <p class="desc">
+            Help us scale transformational programs through purpose-led
+            partnerships. Flexible, high-agency, outcome linked.
+          </p>
 
-          <p class="lies"
-            ><strong>Audience:</strong> Individuals, Teams, Students | Corporate
-            & Education Sector</p
-          >
+          <h3>Open Role: Business Development Consultant</h3>
+          <p class="desc">
+            Help us scale transformational programs through
+            purpose-led-partnerships. Flexible, high-agency.
+          </p>
 
-          <p class="lies"><strong>Modules + Focus Area:</strong></p>
-          <ul>
-            <li class="lies"
-              ><strong>The Body Speaks</strong> – Learn the unspoken. Posture,
-              breath, bhaav—your body’s first language</li
-            >
-            <li class="lies"
-              ><strong>Dance & Confidence</strong> – Build expressive power
-              through choreographed movement and rhythm</li
-            >
-            <li class="lies"
-              ><strong>The Voice Within</strong> – Vocal tone, modulation, and
-              emotional resonance that shifts perception</li
-            >
-            <li class="lies"
-              ><strong>Script Yourself</strong> – Rewrite your narrative.
-              Personal stories become powerful skits</li
-            >
-            <li class="lies"
-              ><strong>Humor Me!</strong> – Confidence through comedy.
-              Reframing, improv, wit—your story, told lighter</li
-            >
-            <li class="lies"
-              ><strong>Find Your Voice</strong> – Music as therapy. Build vocal
-              control and expressive freedom</li
-            >
-            <li class="lies"
-              ><strong>Stage-Ready</strong> – Stage presence meets soul
-              presence. Final showcase with voice, movement, and confidence</li
-            >
-          </ul>
+          <div class="values">
+            <h4>Our Values</h4>
+            <span>Embodiment</span>
+            <span>Presence</span>
+            <span>Dharma</span>
+            <span>Courage</span>
+            <span>Devotion</span>
+            <span>Co-Learning</span>
+          </div>
+        </div>
 
-          <p class="lies"
-            ><strong>Outcome:</strong> Whether it’s reclaiming self-worth or
-            strengthening leadership voice, The Leap Room reconnects people with
-            their bodies, voices, and untold stories. It’s not about
-            ‘performing’ better. It’s about becoming truer.</p
-          >
-
-          <a href="contact-us.html" class="cta-button">EXPLORE THIS PROGRAM</a>
+        <div class="career-right">
+          <img src="images/ca.jpg" alt="Now Hiring Dog" class="career-dog" />
         </div>
       </div>
-    </div>
-
+    </section>
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-section about-us">
             <h3>About Us</h3>
             <p
-              ><span class="brand-name">Inner Leap™</span>: Empowering
+              ><span style="color: #9d0202">Inner Leap™</span>: Empowering
               individuals through transformative coaching and holistic
               development.</p
             >
@@ -223,16 +183,5 @@
         </div>
       </div>
     </footer>
-    <!-- Zoho SalesIQ Chatbot Script -->
-    <script>
-      window.$zoho = window.$zoho || {};
-      $zoho.salesiq = $zoho.salesiq || { ready: function () {} };
-    </script>
-    <script
-      id="zsiqscript"
-      src="https://salesiq.zohopublic.in/widget?wc=siqa18c4506efd45a02bb88e184c9093d5290b8fc1653ff13fcaca8346a9aa35931"
-      defer
-    ></script>
-    <script src="script.js"></script>
   </body>
 </html>

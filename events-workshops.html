@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events & Workshops - InnerLeap</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/Logo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -27,8 +28,20 @@
 
       .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
+      }
+
+      @media (max-width: 992px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .gallery-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
       }
 
       .gallery-item {
@@ -40,13 +53,12 @@
 
       .gallery-item img {
         width: 100%;
-        height: 100%;
+        height: 220px; /* fixed height */
         object-fit: cover;
-        transition: transform 0.5s ease;
+        border-radius: 12px;
         display: block;
       }
 
-      /* Holographic shine effect */
       .gallery-item::before {
         content: "";
         position: absolute;
@@ -79,6 +91,7 @@
     </style>
   </head>
   <body>
+    <!-- Navigation bar here as in your original code -->
     <nav class="navbar">
       <div class="container1">
         <div class="logo">
@@ -131,7 +144,7 @@
           >
         </div>
 
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -146,26 +159,67 @@
     </div>
 
     <div class="gallery-section">
-      <h3 class="gallery-title">Training Shots</h3>
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/xxxx.jpg" alt="Training Shot 1" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/i2.jpg" alt="Training Shot 2" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/we3.jpg" alt="Training Shot 3" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/gal1.jpg" alt="Training Shot 4" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/gal2.jpg" alt="Training Shot 4" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/gal3.jpg" alt="Training Shot 4" />
-        </div>
+        <div class="gallery-item"
+          ><img src="images/gal1.jpg" alt="Training Shot 1"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/gal2.jpg" alt="Training Shot 2"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/gal3.jpg" alt="Training Shot 3"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/gal4.jpg" alt="Training Shot 4"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/gal5.jpg" alt="Training Shot 5"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/i1.jpg" alt="Training Shot 6"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g3.jpg" alt="Training Shot 7"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g2.jpg" alt="Training Shot 8"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g8.jpg" alt="Training Shot 9"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/i3.jpg" alt="Training Shot 10"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g1.jpg" alt="Training Shot 11"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/i2.jpg" alt="Training Shot 12"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g4.jpg" alt="Training Shot 13"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g9.jpg" alt="Training Shot 14"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g10.jpg" alt="Training Shot 15"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g11.jpg" alt="Training Shot 16"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g12.jpg" alt="Training Shot 17"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g13.jpg" alt="Training Shot 18"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/i17.jpg" alt="Training Shot 19"
+        /></div>
+        <div class="gallery-item"
+          ><img src="images/g14.jpg" alt="Training Shot 20"
+        /></div>
       </div>
     </div>
 
@@ -175,8 +229,9 @@
           <div class="footer-section about-us">
             <h3>About Us</h3>
             <p
-              >Inner Leap™: Empowering individuals through transformative
-              coaching and holistic development.</p
+              ><span style="color: #9d0202">Inner Leap™</span>: Empowering
+              individuals through transformative coaching and holistic
+              development.</p
             >
           </div>
           <div class="footer-section quick-links">
@@ -192,9 +247,10 @@
             <h3>Programs</h3>
             <ul>
               <li><a href="abcd-code.html">ABCD-Code</a></li>
-              <li><a href="reinvention-studio.html"> Reinvention Studio</a></li
-              >>
+              <li><a href="reinvention-studio.html"> Reinvention Studio</a></li>
               <li><a href="the-leap-room.html">The Leap Room</a></li>
+              <li><a href="disruptive-manager.html">Disruptive Manager</a></li>
+              <li><a href="voice-craft.html">Voice Craft</a></li>
             </ul>
           </div>
           <div class="footer-section contact-info">

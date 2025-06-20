@@ -1,0 +1,144 @@
+.career-section {
+  padding: 40px 20px;
+}
+
+.career-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.career-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.career-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.2em;
+  color: #400000;
+  margin: 0 0 10px;
+}
+
+.subtext {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background: #400000;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.features {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-weight: 600;
+}
+
+.values h4 {
+  width: 100%;
+  color: #400000;
+}
+
+.career-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.career-dog {
+  width: 90%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.job-card h4 {
+  margin-top: 0;
+  color: #400000;
+}
+
+.job-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.read-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .career-left,
+  .career-right {
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .values {
+    justify-content: center;
+  }
+}
