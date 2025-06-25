@@ -4737,3 +4737,41 @@ form button[type="submit"] {
   right: 0;
 }
 /*End Animation*/
+
+.gallery{
+  display:flex;
+  justify-content:center;
+  padding:40px 0;
+}
+
+/* outer frame */
+.slider-container{
+  width:80%;          /* shrink/grow as you wish                     */
+  height:600px;       /* your requested fixed height                 */
+  overflow:hidden;    /* hides everything except the “current” slide */
+  border-radius:10px;
+}
+
+/* belt that moves left-to-right */
+.slider{
+  display:flex;
+  width:calc(100% * 4);       /* 4 = number of images                  */
+  animation:slide 16s linear infinite;
+}
+
+/* each picture occupies exactly ONE viewport-width of the belt */
+.slider img{
+  flex:0 0 100%;      /* 100 % of .slider-container                  */
+  height:600px;
+  width:100%;
+  object-fit:contain;   /* keeps aspect-ratio, fills the frame         */
+}
+
+/* keyframes: 0-25-50-75-100 hold each picture, with short moves between */
+@keyframes slide{
+  0%,20%     {transform:translateX(  0%);}     /* image 1 */
+  25%,45%    {transform:translateX(-100%);}     /* image 2 */
+  50%,70%    {transform:translateX(-200%);}     /* image 3 */
+  75%,95%    {transform:translateX(-300%);}     /* image 4 */
+  100%       {transform:translateX(  0%);}      /* jump back – no flash */
+}
