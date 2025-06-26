@@ -36,7 +36,7 @@
     letter-spacing: 0.01em;
 }
 .listitem {
-    margin: 25px 0 0;
+    margin:0;
 }
 .listitem ul li, .listitem-nd ul li {
     position: relative;
@@ -51,28 +51,15 @@
     text-align: left;
     list-style: none;
 }
-.listitem ul li:before {
-    content:url('../images/icon/check-g.png');
-    position:absolute;
-    top:0;
-    left:-25px;
-}
-.listitem-nd ul li:before {
-    content:url('../images/icon/check1.png');
-    position:absolute;
-    top:0;
-    left:-25px;
+.listitem-nd ul, .listitem ul
+ {
+    margin: 0;
+    padding: 0;
 }
 .bloghding-img p {
     position: relative;
-    padding-left: 30px;
 }
-.bloghding-img p:before {
-    position: absolute;
-    content: url(../images/icon/arrow.png);
-    top: 0;
-    left:0px;
-}
+
 .blog-hding p span {
     color: #191919;
     font-family: 'Josefin Sans';
@@ -82,5 +69,5 @@
     content: "";
 }
 .blog-hding.bloghding-img {
-    margin-top: 15px;
+    margin-top:0x;
 }

@@ -1,0 +1,16 @@
+.page-header {
+    background-color: #383737;
+    color: #fff;
+    padding: 3rem 2rem 1rem 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+.main-content p {
+    text-align:justify;
+}
+.lies {
+    margin-left:0px;
+}
+.cta-button {margin-left: 0;
+}
+.main-content h3 {text-align: left;}

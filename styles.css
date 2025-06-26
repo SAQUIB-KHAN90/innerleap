@@ -358,7 +358,7 @@
 .page-header {
   background-color: #383737;
   color: #fff;
-  padding: 3rem 2rem;
+  padding:3rem 2rem 1rem 2rem;
   text-align: center;
   margin-top: 140px; /* To account for the fixed navbar */
 }
@@ -606,6 +606,96 @@
   font-size: 1.05rem;
   text-align: center;
 }
+.main-content h6 {
+    font-size: 25px;
+    font-family: 'Josefin Sans';
+    margin: 0;
+}
+.founder-cont p.founder-details {
+    color: #9D0202;
+    font-style: italic;
+    font-family: 'Josefin Sans';
+    font-size: 15px;
+}
+.founder-cont h4
+ {
+    font-size: 24px;
+    color: #000;
+    margin: 0 0 8px;
+    padding: 0;
+    line-height: 20px;
+    text-align: left;
+    letter-spacing: -1px;
+}
+.founder-cont p {
+    font-size: 16px;
+    font-family: 'Josefin Sans';
+    letter-spacing: 0px;
+    line-height: inherit;
+    margin: 0 0 10px;
+    text-align: justify;
+    color:#323232;
+}
+.founder-cont li {
+    font-size: 16px;
+    font-family: 'Josefin Sans';
+    color: #323232;
+    list-style: square;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+.founder-cont h6 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+    margin: 25px 0 10px;
+}
+.founder-sec {padding-top:50px;}
+.flogo-imag {
+    border: 1px solid #ac9e9e;
+}
+.logorow {
+  padding:30px 0 0;
+}
+.certi-name {
+    padding: 5px 2px;
+    background: rgba(0, 0, 0, 0.9);
+    min-height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.certi-name h6 {
+    color: #fff;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    line-height: inherit;
+    letter-spacing: 0px;
+}
+.imgdiv {
+    min-height: 140px;
+    max-height: 141px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgdiv img {
+    max-height: 140px;
+}
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
   .main-content h3 {
@@ -1070,6 +1160,7 @@
   margin-bottom: 1rem;
   line-height: 1.4;
   font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
 }
 .service-item ul li.contbtn a {
     background: #9d0202;
@@ -2595,7 +2686,21 @@ a:hover {
   margin: 0 auto;
   padding: 0 20px;
 }
+.Animal-sec {
+    margin: 0px auto;
+    padding: 40px 20px;
+}
 
+.Animal-sec p {
+    font-size: 16px;
+    font-family: 'Josefin Sans';
+    color: #555555;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    letter-spacing: 0;
+    text-transform: inherit;
+}
 .our-values-section h2 {
   font-size: 2.8rem;
   color: #333;
@@ -2819,6 +2924,16 @@ a:hover {
     bottom: 10px;
     right: 10px;
   }
+.container1
+ {
+    gap:40px;
+}
+.flogo-imag {
+    margin: 0 0 15px;
+}
+
+
+
 }
 
 .audio-intro {
@@ -2938,8 +3053,20 @@ a:hover {
     justify-content: center; /* Ensure vertical centering (if height allows) */
   }
   /* Remove redundant width and max-width definitions for contact-left1 and contact-right1 */
-}
+  
 
+}
+@media only screen and (min-device-width : 576px) and (max-device-width : 768px) {
+  .container1 {gap:415px;}
+}
+@media only screen and (min-device-width : 769px) and (max-device-width : 991px) {
+  .logo img {
+    width: 100px;
+    height: 50px;
+  }
+}
+@media only screen and (min-device-width : 992px) and (max-device-width : 1024px) {
+}
 /* Team Page Styles */
 .main-content-team {
   max-width: 1200px; /* Make this section wider */
@@ -3169,7 +3296,52 @@ a:hover {
   color: #333;
   font-weight: 600;
 }
+.onimg-text {
+    position: relative;
+    z-index: 0;
+}
+.onimg-text:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+}
 
+.gallery-item:hover .bghover {
+  opacity: 1;
+  visibility: visible;
+}
+.bghover {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.onimg-text p {
+  display: none;
+  visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    text-align: center; 
+    font-size: 14px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.gallery-item:hover .onimg-text p {visibility:visible;}
 /* Brand Name Style */
 .brand-name {
   color: #9d0202;
@@ -3721,7 +3893,7 @@ a:hover {
 .navbar {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed !important
+  position: fixed !important;
   width: 100%;
   z-index: 999;
 }
