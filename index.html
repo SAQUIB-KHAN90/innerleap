@@ -172,31 +172,7 @@
         </div>
       </div>
     </div>
-    <!--Animation-->
-    <div class="section anim-sec">
-      <div class="section-wrapper">
-        <div class="content-wrapper">
-          <div class="content content-4">
-            <div class="mobile-visual">
-              <img class="card-img" src="images/effect.jpeg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="visual">
-          <div class="card-wrapper">
-            <div class="card card-4">
-              <img class="card-img" src="images/effect.jpeg" alt="" />
-            </div>
-          </div>
-        </div> </div
-      ><!--/section-wrapper--> </div
-    ><!--/Animation-->
-    <!-- Trigger Section -->
-    <!-- <section id="image-trigger-section">
-      <div class="scroll-popup-image" id="scrollImage">
-        <img src="images/found.jpg" alt="Popup Visual" />
-      </div>
-    </section> -->
+
     <!-- Our Mission Section -->
     <div id="our-mission" class="our-mission-section">
       <div class="container">
@@ -569,6 +545,43 @@
       </div>
     </section> -->
 
+    <p class="gall">Gallery</p>
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="images/Choti and Mom.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="images/g2.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="images/g3.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="images/g4.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/gallery/g5.jpeg" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/gallery/g6.jpeg" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/gallery/g7.jpeg" alt="" />
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
     <!-- FAQ Section -->
     <section class="faq-section">
       <div class="container">
@@ -851,6 +864,78 @@
         alt="WhatsApp"
       />
     </a>
+    <script>
+      let slider = document.querySelector(".slider .list");
+      let items = document.querySelectorAll(".slider .list .item");
+      let next = document.getElementById("next");
+      let prev = document.getElementById("prev");
+      let dots = document.querySelectorAll(".slider .dots li");
+
+      let lengthItems = items.length - 1;
+      let active = 0;
+      next.onclick = function () {
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+      };
+      prev.onclick = function () {
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+      };
+      let refreshInterval = setInterval(() => {
+        next.click();
+      }, 3000);
+      function reloadSlider() {
+        slider.style.left = -items[active].offsetLeft + "px";
+        //
+        let last_active_dot = document.querySelector(".slider .dots li.active");
+        last_active_dot.classList.remove("active");
+        dots[active].classList.add("active");
+
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(() => {
+          next.click();
+        }, 3000);
+      }
+
+      dots.forEach((li, key) => {
+        li.addEventListener("click", () => {
+          active = key;
+          reloadSlider();
+        });
+      });
+      window.onresize = function (event) {
+        reloadSlider();
+      };
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("popup");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Check if the popup has been shown before
+        if (!localStorage.getItem("popupShown")) {
+          // Show popup after a slight delay (e.g., 1 second)
+          setTimeout(() => {
+            popup.classList.add("active");
+            // Set flag in localStorage
+            localStorage.setItem("popupShown", "true");
+          }, 1000);
+        }
+
+        // Close button functionality
+        closeBtn.addEventListener("click", function () {
+          popup.classList.remove("active");
+        });
+
+        // Close when clicking outside the popup box
+        popup.addEventListener("click", function (e) {
+          if (e.target === popup) {
+            popup.classList.remove("active");
+          }
+        });
+      });
+    </script>
 
     <script src="script.js"></script>
   </body>

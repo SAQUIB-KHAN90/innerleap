@@ -195,27 +195,3 @@ document.querySelectorAll(".faq-question").forEach((item) => {
     }
   });
 });
-
-const popup = document.getElementById("scrollImage");
-const mission = document.getElementById("our-mission");
-
-window.addEventListener("scroll", () => {
-  const triggerTop = document.getElementById("image-trigger-section").offsetTop;
-  const missionTop = mission.offsetTop;
-  const scrollY = window.scrollY;
-
-  // Show image once scrolled past trigger point but before "Our Mission"
-  if (scrollY >= triggerTop && scrollY < missionTop - window.innerHeight / 2) {
-    popup.classList.add("active");
-  } else {
-    popup.classList.remove("active");
-  }
-});
-
-window.addEventListener("load", () => {
-  document.getElementById("popup").style.display = "flex";
-});
-
-document.getElementById("closeBtn").addEventListener("click", () => {
-  document.getElementById("popup").style.display = "none";
-});
